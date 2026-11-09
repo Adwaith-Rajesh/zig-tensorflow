@@ -1,3 +1,5 @@
+pub const deps = @import("src/deps.zig");
+
 const std = @import("std");
 const Translator = @import("translate_c").Translator;
 
