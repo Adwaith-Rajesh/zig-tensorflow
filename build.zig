@@ -7,17 +7,15 @@ pub fn build(b: *std.Build) !void {
     const optimize = b.standardOptimizeOption(.{});
     const target = b.standardTargetOptions(.{});
 
-    const tf_path = b.option([]const u8, "tf-path", "path to libtensorflow");
+    const tf_path_opt = b.option([]const u8, "tf-path", "path to libtensorflow");
 
-    const gpu_opt = b.option(bool, "gpu", "include GPU deps") orelse true;
-    _ = gpu_opt;
     const translate_c = b.dependency("translate_c", .{});
 
     var c_api_h: std.Build.LazyPath = undefined;
     var tf_include: std.Build.LazyPath = undefined;
     var tf_lib: std.Build.LazyPath = undefined;
 
-    if (tf_path) |tfp| {
+    if (tf_path_opt) |tfp| {
         c_api_h = try b.graph.cwdRelativePath(tfp).join(b.graph.arena, "include/tensorflow/c/c_api.h");
         tf_include = try b.graph.cwdRelativePath(tfp).join(b.graph.arena, "include");
         tf_lib = try b.graph.cwdRelativePath(tfp).join(b.graph.arena, "lib");
