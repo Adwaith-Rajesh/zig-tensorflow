@@ -16,6 +16,7 @@ This repo will be the base for other wrappers that I want to write in Zig for Te
 #### References
 
  - [libtensorflow](https://www.tensorflow.org/install/lang_c)
+ - [Adwaith-Rajesh/libtensorflow](https://github.com/Adwaith-Rajesh/libtensorflow)
  - [NVIDIA CUDA dist](https://developer.download.nvidia.com/compute/cuda/redist)
  - [NVIDIA cuDNN dist](https://developer.download.nvidia.com/compute/cuda/redist/)
  - [Build Dep Table](https://www.tensorflow.org/install/source#gpu)
