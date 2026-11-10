@@ -1,6 +1,6 @@
 .{
     .name = .zig_tensorflow,
-    .version = "2.18.0-zig.0",
+    .version = "2.18.0-zig.1",
     .dependencies = .{
         .libtensorflow = .{
             .url = "https://github.com/Adwaith-Rajesh/libtensorflow/releases/download/v2.18.0/libtensorflow-gpu-linux-x86_64.tar.gz",
